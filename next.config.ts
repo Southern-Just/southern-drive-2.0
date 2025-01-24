@@ -2,6 +2,12 @@ import type { NextConfig } from "next";
 import { hostname } from "os";
 
 const nextConfig: NextConfig = {
+
+  experimental:{
+    serverActions:{
+      bodySizeLimit:"100MB",
+    },
+  },
   /* config options here */
   images: {
     remotePatterns: [
