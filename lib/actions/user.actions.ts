@@ -12,9 +12,9 @@ const getUserByEmail = async (email: string) => {
   const { databases } = await createAdminClient();
 
   const result = await databases.listDocuments(
-      appwriteConfig.databaseId,
-      appwriteConfig.usersCollectionsId,
-      [Query.equal("email", [email])],
+    appwriteConfig.databaseId,
+    appwriteConfig.usersCollectionId,
+    [Query.equal("email", [email])],
   );
 
   return result.total > 0 ? result.documents[0] : null;
@@ -38,9 +38,9 @@ export const sendEmailOTP = async ({ email }: { email: string }) => {
 };
 
 export const createAccount = async ({
-                                      fullName,
-                                      email,
-                                    }: {
+  fullName,
+  email,
+}: {
   fullName: string;
   email: string;
 }) => {
@@ -53,15 +53,15 @@ export const createAccount = async ({
     const { databases } = await createAdminClient();
 
     await databases.createDocument(
-        appwriteConfig.databaseId,
-        appwriteConfig.usersCollectionsId,
-        ID.unique(),
-        {
-          fullName,
-          email,
-          avatar: avatarPlaceholderUrl,
-          accountId,
-        },
+      appwriteConfig.databaseId,
+      appwriteConfig.usersCollectionId,
+      ID.unique(),
+      {
+        fullName,
+        email,
+        avatar: avatarPlaceholderUrl,
+        accountId,
+      },
     );
   }
 
@@ -69,9 +69,9 @@ export const createAccount = async ({
 };
 
 export const verifySecret = async ({
-                                     accountId,
-                                     password,
-                                   }: {
+  accountId,
+  password,
+}: {
   accountId: string;
   password: string;
 }) => {
@@ -100,9 +100,9 @@ export const getCurrentUser = async () => {
     const result = await account.get();
 
     const user = await databases.listDocuments(
-        appwriteConfig.databaseId,
-        appwriteConfig.usersCollectionsId,
-        [Query.equal("accountId", result.$id)],
+      appwriteConfig.databaseId,
+      appwriteConfig.usersCollectionId,
+      [Query.equal("accountId", result.$id)],
     );
 
     if (user.total <= 0) return null;

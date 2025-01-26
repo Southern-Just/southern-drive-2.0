@@ -5,7 +5,7 @@ export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs));
 }
 export const parseStringify = (value: unknown) =>
-    JSON.parse(JSON.stringify(value));
+  JSON.parse(JSON.stringify(value));
 
 export const convertFileToUrl = (file: File) => URL.createObjectURL(file);
 
@@ -111,11 +111,11 @@ export const formatDateTime = (isoString: string | null | undefined) => {
 };
 
 export const getFileIcon = (
-    extension: string | undefined,
-    type: FileType | string,
+  extension: string | undefined,
+  type: FileType | string,
 ) => {
   switch (extension) {
-      // Document
+    // Document
     case "pdf":
       return "/assets/icons/file-pdf.svg";
     case "doc":
@@ -129,10 +129,10 @@ export const getFileIcon = (
     case "xls":
     case "xlsx":
       return "/assets/icons/file-document.svg";
-      // Image
+    // Image
     case "svg":
       return "/assets/icons/file-image.svg";
-      // Video
+    // Video
     case "mkv":
     case "mov":
     case "avi":
@@ -143,7 +143,7 @@ export const getFileIcon = (
     case "m4v":
     case "3gp":
       return "/assets/icons/file-video.svg";
-      // Audio
+    // Audio
     case "mp3":
     case "mpeg":
     case "wav":
@@ -203,9 +203,9 @@ export const getUsageSummary = (totalSpace: any) => {
       title: "Media",
       size: totalSpace.video.size + totalSpace.audio.size,
       latestDate:
-          totalSpace.video.latestDate > totalSpace.audio.latestDate
-              ? totalSpace.video.latestDate
-              : totalSpace.audio.latestDate,
+        totalSpace.video.latestDate > totalSpace.audio.latestDate
+          ? totalSpace.video.latestDate
+          : totalSpace.audio.latestDate,
       icon: "/assets/icons/file-video-light.svg",
       url: "/media",
     },
