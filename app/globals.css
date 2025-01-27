@@ -238,20 +238,6 @@
     -ms-overflow-style: none;
 
   }
-  .dashboard-center {
-    @apply h-full rounded-[20px] p-5 xl:pt-10 overflow-y-auto max-h-[500px] !important;
-  }
-  /* Hide scrollbar for WebKit browsers (Chrome, Safari) */
-  .dashboard-center::-webkit-scrollbar {
-    display: none;
-  }
-
-  /* Hide scrollbar for Firefox */
-  .dashboard-center{
-    scrollbar-width: none;
-    -ms-overflow-style: none;
-
-  }
 
   .recent-file-details {
     @apply flex w-64  flex-col xl:flex-row xl:justify-between !important;
