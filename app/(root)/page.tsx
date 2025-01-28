@@ -22,7 +22,7 @@ const Dashboard = async () => {
 
   return (
     <div className="dashboard-container">
-        <section >
+        <section className="mt-10 lg:mt-0">
           <Chart used={totalSpace.used} />
           <Separator className="separator" />
 
