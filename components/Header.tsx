@@ -24,7 +24,7 @@ const Header = ({
             await signOutUser();
           }}
         >
-          <Button type="submit" className="sign-out-button">
+          <Button type="submit" className="sign-out-button-dash">
             <Image
               src="/assets/icons/logout.svg"
               alt="logo"
@@ -32,6 +32,7 @@ const Header = ({
               height={24}
               className="w-6"
             />
+            logout
           </Button>
         </form>
       </div>
