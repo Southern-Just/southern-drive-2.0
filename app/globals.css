@@ -134,7 +134,7 @@
     @apply mx-auto max-w-7xl px-5;
   }
   .primary-btn {
-    @apply bg-brand hover:bg-brand-200 transition-all rounded-full button !important;
+    @apply bg-brand-100/70 hover:bg-brand-100/60 transition-all rounded-full button !important;
   }
   .flex-center {
     @apply flex items-center justify-center;
@@ -239,8 +239,9 @@
 
   }
 
+
   .recent-file-details {
-    @apply flex w-64  flex-col xl:flex-row xl:justify-between !important;
+    @apply flex w-64  flex-row xl:flex-row xl:justify-between !important;
   }
   .recent-file-name {
     @apply subtitle-2 line-clamp-1 w-full text-light-100 sm:max-w-[200px] lg:max-w-[250px] !important;
@@ -309,7 +310,9 @@
 
   /* AuthForm */
   .auth-form {
-    @apply flex max-h-[800px] w-full max-w-[580px] flex-col justify-center space-y-6 transition-all lg:h-full lg:space-y-8 !important;
+    @apply flex max-h-[800px] w-full max-w-[580px] flex-col justify-center space-y-6 transition-all lg:h-full lg:space-y-8 rounded-lg p-10 !important;
+    /* Apply bg-brand only to small screens (mobile) */
+    @apply bg-brand/10 sm:bg-transparent;
   }
   .form-title {
     @apply h1 text-center text-light-100 md:text-left !important;
@@ -337,19 +340,19 @@
     @apply mx-auto aspect-square w-[180px]  text-white xl:w-[250px] !important;
   }
   .polar-grid {
-    @apply first:fill-white/20 last:fill-brand !important;
+    @apply first:fill-white/60 last:fill-brand-100/90 !important;
   }
   .chart-details {
-    @apply flex-1 items-start bg-brand rounded-sm ml-3 px-3 py-0 sm:px-5 lg:p-3 xl:pr-5 !important;
+    @apply flex-1 items-start bg-brand min-h-6 rounded-sm ml-3 px-3 py-0 sm:px-5 lg:p-3 xl:pr-5 !important;
   }
   .chart-total-percentage {
-    @apply fill-brand-100 text-4xl font-bold !important;
+    @apply fill-brand text-4xl font-bold !important;
   }
   .chart-title {
     @apply h3 font-bold md:text-center lg:text-left !important;
   }
   .chart-description {
-    @apply subtitle-1 mt-2 w-full text-brand-100/70 md:text-center lg:text-left !important;
+    @apply subtitle-1 mt-2 w-full text-brand-100/80 md:text-center lg:text-left !important;
   }
 
   /* FileUploader */
@@ -379,6 +382,9 @@
   }
   .sign-out-button {
     @apply flex-center h-[52px] min-w-[54px] items-center rounded-full bg-brand/10 p-0 text-brand shadow-none transition-all hover:bg-brand/20 !important;
+  }
+  .sign-out-button-dash {
+    @apply flex-center flex-col h-[52px] min-w-[54px] items-center rounded-full bg-rose-500/10 p-7 text-brand-100 shadow-none transition-all hover:bg-rose-400/30 hover:text-gray-900 !important;
   }
 
   /* Mobile Navigation */
