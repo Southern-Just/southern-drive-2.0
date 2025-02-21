@@ -1,7 +1,9 @@
 # 🚀 A-Storage-System  
 🌴 **Southern Drive in the Making** :-->> https://southern-drive.vercel.app/ 
-# Figma Design
-https://www.figma.com/design/cBZr7IDfFpB34HYPWPT0qf/Southern-Drive?node-id=0-1&p=f&t=wYXPPRP1sySi6xRA-0
+
+![Screenshot_2025-02-21_05_27_29](https://github.com/user-attachments/assets/f0fa3bb0-b7e7-43c8-bcab-c3f0ab8072f7)
+
+### Figma Design: https://www.figma.com/design/cBZr7IDfFpB34HYPWPT0qf/Southern-Drive?node-id=0-1&p=f&t=wYXPPRP1sySi6xRA-0
 ---
 
 ## 🎯 The Experience  
